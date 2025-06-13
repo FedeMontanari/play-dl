@@ -713,8 +713,7 @@ async function getIosFormats(videoId: string, cookieJar: { [key: string]: string
         cookieJar
     });
 
-    // return JSON.parse(response).streamingData.adaptiveFormats
-    return JSON.parse(response).streamingData.formats;
+    return JSON.parse(response).streamingData?.adaptiveFormats;
 }
 
 function getWatchPlaylist(response: any, body: any, url: string): YouTubePlayList {
